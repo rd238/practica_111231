@@ -1,3 +1,6 @@
 C:/Users/logca/CLionProjects/afpractica/cmake-build-debug/CMakeFiles/afpractica.dir
 C:/Users/logca/CLionProjects/afpractica/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/logca/CLionProjects/afpractica/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/logca/CLionProjects/afpractica/cmake-build-debug/zadaniya/CMakeFiles/zadaniya.dir
+C:/Users/logca/CLionProjects/afpractica/cmake-build-debug/zadaniya/CMakeFiles/edit_cache.dir
+C:/Users/logca/CLionProjects/afpractica/cmake-build-debug/zadaniya/CMakeFiles/rebuild_cache.dir

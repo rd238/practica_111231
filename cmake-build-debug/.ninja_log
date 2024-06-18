@@ -1,0 +1,25 @@
+# ninja log v5
+32	136	7404277407052488	CMakeFiles/afpractica.dir/main.c.obj	2a6f71ecb7f179ec
+137	273	7404277408408865	CMakeFiles/afpractica.dir/zadaniya/zadanie_1.c.obj	77032f76cdab86c1
+2	521	7404278266986509	build.ninja	c5c0b660fdfebdea
+6	282	7404278679757872	CMakeFiles/afpractica.dir/main.c.obj	2a6f71ecb7f179ec
+5	153	7404279283115348	CMakeFiles/afpractica.dir/main.c.obj	2a6f71ecb7f179ec
+153	376	7404279285154484	afpractica.exe	7ae97f054ed8b08d
+5	242	7404280478258019	CMakeFiles/afpractica.dir/main.c.obj	2a6f71ecb7f179ec
+243	437	7404280480059248	CMakeFiles/afpractica.dir/zadaniya/zadanie_1.c.obj	77032f76cdab86c1
+437	617	7404280481968308	afpractica.exe	7ae97f054ed8b08d
+4	414	7404280926305843	CMakeFiles/afpractica.dir/main.c.obj	2a6f71ecb7f179ec
+415	617	7404280928287391	afpractica.exe	7ae97f054ed8b08d
+7	150	7404281506805252	CMakeFiles/afpractica.dir/main.c.obj	2a6f71ecb7f179ec
+151	388	7404281509326143	CMakeFiles/afpractica.dir/zadaniya/zadanie_1.c.obj	77032f76cdab86c1
+388	534	7404281510732461	afpractica.exe	7ae97f054ed8b08d
+6	100	7404281704765496	CMakeFiles/afpractica.dir/zadaniya/zadanie_1.c.obj	77032f76cdab86c1
+101	390	7404281707031009	afpractica.exe	7ae97f054ed8b08d
+5	98	7404281986315522	CMakeFiles/afpractica.dir/zadaniya/zadanie_1.c.obj	77032f76cdab86c1
+98	248	7404281987653770	afpractica.exe	7ae97f054ed8b08d
+12	372	7404283819033674	CMakeFiles/afpractica.dir/zadaniya/zadanie_1.c.obj	77032f76cdab86c1
+373	656	7404283821806015	afpractica.exe	7ae97f054ed8b08d
+4	464	7404284078943666	CMakeFiles/afpractica.dir/main.c.obj	2a6f71ecb7f179ec
+465	635	7404284080611700	afpractica.exe	7ae97f054ed8b08d
+6	451	7404284408011662	CMakeFiles/afpractica.dir/zadaniya/zadanie_1.c.obj	77032f76cdab86c1
+452	612	7404284409856126	afpractica.exe	7ae97f054ed8b08d

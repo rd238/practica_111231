@@ -6,6 +6,10 @@
 			[
 				{
 					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
@@ -17,6 +21,21 @@
 					[
 						0
 					]
+				},
+				{
+					"build" : "zadaniya",
+					"jsonFile" : "directory-zadaniya-Debug-7bd5a59301b81cf14398.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "zadaniya",
+					"targetIndexes" : 
+					[
+						1
+					]
 				}
 			],
 			"name" : "Debug",
@@ -25,12 +44,14 @@
 				{
 					"directoryIndexes" : 
 					[
-						0
+						0,
+						1
 					],
 					"name" : "afpractica",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +60,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "afpractica::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-afpractica-Debug-822c5d7513e478916c8c.json",
+					"jsonFile" : "target-afpractica-Debug-6adcc94e7e00c9731ef2.json",
 					"name" : "afpractica",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zadaniya::@41ea5c7d8011d1e1474b",
+					"jsonFile" : "target-zadaniya-Debug-3786fa5a303d515f1950.json",
+					"name" : "zadaniya",
 					"projectIndex" : 0
 				}
 			]

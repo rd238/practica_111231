@@ -103,9 +103,72 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/logca/CLionProjects/afpractica/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target zadaniya
+
+
+#############################################
+# Order-only phony target for zadaniya
+
+build cmake_object_order_depends_target_zadaniya: phony || zadaniya/CMakeFiles/zadaniya.dir
+
+build zadaniya/CMakeFiles/zadaniya.dir/zadanie_1.c.obj: C_COMPILER__zadaniya_unscanned_Debug C$:/Users/logca/CLionProjects/afpractica/zadaniya/zadanie_1.c || cmake_object_order_depends_target_zadaniya
+  DEP_FILE = zadaniya\CMakeFiles\zadaniya.dir\zadanie_1.c.obj.d
+  FLAGS = -g -std=gnu99 -fdiagnostics-color=always
+  OBJECT_DIR = zadaniya\CMakeFiles\zadaniya.dir
+  OBJECT_FILE_DIR = zadaniya\CMakeFiles\zadaniya.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target zadaniya
+
+
+#############################################
+# Link the static library zadaniya\libzadaniya.a
+
+build zadaniya/libzadaniya.a: C_STATIC_LIBRARY_LINKER__zadaniya_Debug zadaniya/CMakeFiles/zadaniya.dir/zadanie_1.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = zadaniya\CMakeFiles\zadaniya.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = zadaniya\libzadaniya.a
+  TARGET_PDB = zadaniya.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build zadaniya/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\logca\CLionProjects\afpractica\cmake-build-debug\zadaniya && "D:\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build zadaniya/edit_cache: phony zadaniya/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build zadaniya/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\logca\CLionProjects\afpractica\cmake-build-debug\zadaniya && "D:\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\logca\CLionProjects\afpractica -BC:\Users\logca\CLionProjects\afpractica\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build zadaniya/rebuild_cache: phony zadaniya/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build afpractica: phony afpractica.exe
+
+build libzadaniya.a: phony zadaniya/libzadaniya.a
+
+build zadaniya: phony zadaniya/libzadaniya.a
 
 # =============================================================================
 # Folder targets.
@@ -115,7 +178,14 @@ build afpractica: phony afpractica.exe
 #############################################
 # Folder: C:/Users/logca/CLionProjects/afpractica/cmake-build-debug
 
-build all: phony afpractica.exe
+build all: phony afpractica.exe zadaniya/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/logca/CLionProjects/afpractica/cmake-build-debug/zadaniya
+
+build zadaniya/all: phony zadaniya/libzadaniya.a
 
 # =============================================================================
 # Built-in targets
@@ -124,14 +194,14 @@ build all: phony afpractica.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/logca/CLionProjects/afpractica/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/logca/CLionProjects/afpractica/CMakeLists.txt C$:/Users/logca/CLionProjects/afpractica/zadaniya/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/logca/CLionProjects/afpractica/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake: phony
+build C$:/Users/logca/CLionProjects/afpractica/CMakeLists.txt C$:/Users/logca/CLionProjects/afpractica/zadaniya/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake D$:/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

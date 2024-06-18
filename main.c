@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "zadaniya/zadanie.h"
 
 int main(void) {
-    printf("Hello, World!\n");
-    return 0;
+    printf("%lf", zadanie1(3, 58, 12));
+
 }

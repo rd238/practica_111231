@@ -105,6 +105,9 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "D:/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"path" : "zadaniya/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",
