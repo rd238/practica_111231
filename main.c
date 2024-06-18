@@ -2,6 +2,6 @@
 #include "zadaniya/zadanie.h"
 
 int main(void) {
-    printf("%lf", zadanie1(3, 58, 12));
-
+    printf("%lf\n", zadanie1(3, 58, 12));
+    zadanie2(30,30,30);
 }

@@ -8,5 +8,12 @@
 double zadanie1(double grad, double min, double sec);
 
 
+/*
+Заданы три числа: a, b, c. Определить, могут ли они быть сторо-
+нами треугольника, и если да, то определить его тип: равносторонний,
+равнобедренный, разносторонний.
+*/
+void zadanie2(int a, int b, int c);
+
 
 #endif //ZADANIE_H
