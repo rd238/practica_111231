@@ -97,3 +97,23 @@ void zadanie4(int *c, int n) {
     printf("\n%d - sum positive elements\n", sum_positive);
     printf("%d - quantity negative elements\n", quantity_negative);
 }
+
+
+
+
+/*
+Строки матрицы A(m,n) заполнены не полностью: в массиве
+L(m) указано количество элементов в каждой строке. Переслать эле-
+менты матрицы построчно в начало одномерного массива T(m*n) и
+подсчитать их количество.
+ */
+int zadanie5(int **A, int *L, int *T, int m, int n) {
+    int size_T = 0;
+    for(int i = 0; i < m; i++) {
+        for(int j = 0; j < L[i]; j++) {
+            T[size_T++] = A[i][j];
+        }
+    }
+
+    return size_T;
+}
