@@ -16,4 +16,13 @@ double zadanie1(double grad, double min, double sec);
 void zadanie2(int a, int b, int c);
 
 
+
+/*
+Численно убедиться, является ли заданная функция y = f(x)
+чётной или нёчетной на заданном отрезке -a <= x <= a . Учесть по-
+грешность вычислений и возможные точки разрыва функции.
+*/
+void zadanie3(double(*f)(double), double a);
+
+
 #endif //ZADANIE_H
