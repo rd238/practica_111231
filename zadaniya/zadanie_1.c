@@ -117,3 +117,39 @@ int zadanie5(int **A, int *L, int *T, int m, int n) {
 
     return size_T;
 }
+
+
+
+
+/*
+Седловой точкой в матрице называется элемент, являющийся
+одновременно наибольшим в столбце и наименьшим в строке. Седло-
+вых точек может быть несколько. В матрице A(m,n) найти все седло-
+вые точки либо установить, что таких точек нет.
+ */
+void zadanie6(int **A, int m, int n) {
+    for(int i = 0; i < m; i++) {
+        int min_element = A[i][0];
+        int min_index = 0;
+
+        for(int j = 1; j < n; j++)
+            if(min_element > A[i][j])
+                min_element = A[i][j], min_index = j;
+
+        int max_element = A[0][min_index];
+        for(int j = 1; j < m; j++)
+            if(A[j][min_index] > max_element)
+                max_element = A[j][min_index];
+
+        if(max_element == min_element)
+            printf("\n(%d) (%d, %d) is saddle point\n", min_element, i, min_index);
+    }
+}
+
+
+
+
+
+
+
+

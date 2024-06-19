@@ -14,6 +14,7 @@ int main(void) {
     //int a[7] = {1,2,3,4,-3,-2,-1};
     //zadanie4(a,7);
 
+    /*
     int **A = (int**)malloc(sizeof(int*) * 3);
     for(int i = 0; i < 3; i++)
         A[i] = malloc(sizeof(int) * 2);
@@ -28,6 +29,16 @@ int main(void) {
     for(int i = 0; i < 3; i++)
         free(A[i]);
     free(A);
+    */
 
-
+    int **A = (int**)malloc(sizeof(int*) * 4);
+    for(int i = 0; i < 4; i++)
+        A[i] = malloc(sizeof(int) * 3);
+    for(int i = 0; i < 4; i++)
+        for(int j = 0; j < 3; j++)
+            scanf("%d", &A[i][j]);
+    zadanie6(A, 4, 4);
+    for(int i = 0; i < 4; i++)
+        free(A[i]);
+    free(A);
 }
