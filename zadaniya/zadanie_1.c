@@ -150,6 +150,42 @@ void zadanie6(int **A, int m, int n) {
 
 
 
+/*
+Натуральное число в p-ичной системе счисления задано своими
+цифрами, хранящимися в массиве K(n). Проверить корректность тако-
+го представления и перевести число в q-ичную систему (возможно,
+число слишком велико, чтобы получить его внутреннее представление;
+кроме того, p <= 10, q <= 10 ).
+ */
+void zadanie7(int *K, int n, int p, int q) {
+    int is_correctly = 1;
+    for(int i = 0; i < n; i++)
+        if(K[i] < 0 && K[i] >= p)
+            is_correctly = 0;
+
+    if(is_correctly) {
+        int digit = 0;
+        for(int i = 0, j = n - 1; i < n; i++, j--) {
+            int factor = 1;
+            for(int k = 0; k < j; k++)
+                factor *= p;
+            digit += K[i] * factor;
+        }
+
+        int res[n + n];
+        int size_res = 0;
+        while(digit != 0) {
+            res[size_res++] = digit % q;
+            digit /= q;
+        }
+        for(int i = size_res-1; i >= 0; i--)
+            printf("%d", res[i]);
+        printf("\n");
+    }
+}
+
+
+
 
 
 
