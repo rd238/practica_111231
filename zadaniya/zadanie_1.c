@@ -77,3 +77,23 @@ void zadanie3(double(*f)(double), double a){
     else
         printf("neither odd nor even");
 }
+
+
+
+/*
+В массиве c(n) подсчитать количество отрицательных и сумму
+положительных элементов.
+*/
+void zadanie4(int *c, int n) {
+    int sum_positive = 0;
+    int quantity_negative = 0;
+    for(int i = 0; i < n; i++) {
+        if(c[i] < 0)
+            quantity_negative++;
+        else
+            sum_positive += c[i];
+    }
+
+    printf("\n%d - sum positive elements\n", sum_positive);
+    printf("%d - quantity negative elements\n", quantity_negative);
+}

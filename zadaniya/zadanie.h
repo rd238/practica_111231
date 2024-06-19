@@ -25,4 +25,14 @@ void zadanie2(int a, int b, int c);
 void zadanie3(double(*f)(double), double a);
 
 
+/*
+В массиве c(n) подсчитать количество отрицательных и сумму
+положительных элементов.
+*/
+void zadanie4(int *c, int n);
+
+
+
+
+
 #endif //ZADANIE_H
