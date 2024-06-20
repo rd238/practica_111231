@@ -51,7 +51,7 @@ int main(void) {
     zadanie7(Q, 2, 8, 10);
     */
 
-
+    /*
     Point points[MAX_POINTS];
     points[0].x = 3, points[0].y = 1;
     points[1].x = 5, points[1].y = 2;
@@ -59,4 +59,23 @@ int main(void) {
     points[3].x = 1, points[3].y = 1;
 
     printf("%lf", zadanie8(points, 4));
+    */
+
+
+    int **A = (int**)malloc(sizeof(int*) * 3);
+    int j = 0;
+    for(int i = 0; i < 3; i++, j++) {
+        A[i] = malloc(sizeof(int) * 2);
+        for(int k = 0; k < 2; k++)
+            A[i][k] = j;
+    }
+    int T[10];
+    int n = zadanie9(A, T, 3, 2);
+    for(int i = 0; i < n; i++) {
+        printf("%d ", T[i]);
+    }
+
+    for(int i = 0; i < 3; i++)
+        free(A[i]);
+    free(A);
 }

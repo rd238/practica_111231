@@ -282,4 +282,23 @@ double zadanie8(Point *points, int n) {
 
 
 
+/*
+Выполнить операцию транспонирования прямоугольной матри-
+цы A(m,n),m != n, не выделяя дополнительного массива для хранения
+результата. Матрицу представить в виде одномерного массива.
+ */
+int zadanie9(int **A, int *res, int m, int n) {
+    int size_res = 0;
+    for(int i = 0; i < m; i++) {
+        for(int j = i + 1; j < n; j++) {
+            int temp = A[i][j];
+            A[i][j] = A[j][i];
+            A[j][i] = temp;
+        }
+    }
+    for(int i = 0; i < m; i++)
+        for(int j = 0; j < n; j++)
+            res[size_res++] = A[i][j];
 
+    return size_res;
+}
