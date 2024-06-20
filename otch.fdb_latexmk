@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1718910491.53565 "c:/Users/logca/CLionProjects/afpractica/otch.tex" "otch.pdf" "otch" 1718910494.03204 0
+["pdflatex"] 1718910868.93169 "c:/Users/logca/CLionProjects/afpractica/otch.tex" "otch.pdf" "otch" 1718910871.07235 0
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1718898422 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1440.pk" 1718899613 36852 84f812d4447bd00a6f48000a47e35046 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1728.pk" 1718899528 45168 34f136e02d88bf5742082cc43dff8a7d ""
@@ -132,9 +132,9 @@
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.sty" 1673775190 274 5ae372b7df79135d240456a1c6f2cf9a ""
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1673775190 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/logca/CLionProjects/afpractica/otch.tex" 1718910490 8828 2d66b456fa31962a8955f50e25358004 ""
-  "otch.aux" 1718910493 132 61e1bedc8c7da8c5fef50fe149ac19c1 "pdflatex"
-  "otch.tex" 1718910490 8828 2d66b456fa31962a8955f50e25358004 ""
+  "c:/Users/logca/CLionProjects/afpractica/otch.tex" 1718910864 8970 eaf8b0c16b83d2d99305a5ecac999451 ""
+  "otch.aux" 1718910870 132 4d327e994cbe2c8b150839962ca4f863 "pdflatex"
+  "otch.tex" 1718910864 8970 eaf8b0c16b83d2d99305a5ecac999451 ""
   (generated)
   "otch.aux"
   "otch.log"
