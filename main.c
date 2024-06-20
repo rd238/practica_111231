@@ -44,9 +44,19 @@ int main(void) {
     free(A);
     */
 
-
+    /*
     int K[3] = {5,6,7};
     zadanie7(K, 3, 8, 2);
     int Q[2] = {7,7};
     zadanie7(Q, 2, 8, 10);
+    */
+
+
+    Point points[MAX_POINTS];
+    points[0].x = 3, points[0].y = 1;
+    points[1].x = 5, points[1].y = 2;
+    points[2].x = 2, points[2].y = 5;
+    points[3].x = 1, points[3].y = 1;
+
+    printf("%lf", zadanie8(points, 4));
 }
