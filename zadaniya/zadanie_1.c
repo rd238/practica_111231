@@ -302,3 +302,30 @@ int zadanie9(int **A, int *res, int m, int n) {
 
     return size_res;
 }
+
+
+
+
+
+/*
+Текст записан одной длинной строкой. Признаком красной стро-
+ки служит символ $. Переформатировать текст в 60-символьные стро-
+ки, формируя абзацы.
+ */
+void zadanie10(char *text) {
+    int str_size = 60;
+    int counter = 0;
+    for(char *i = text; *i != '\0'; i++) {
+        if(counter == str_size) {
+            putchar('\n');
+            counter = 0;
+        }
+        if(*i == '$') {
+            putchar('\n');
+            *i = '\n';
+            counter = 0;
+        }
+        putchar(*i);
+        counter++;
+    }
+}
