@@ -54,20 +54,20 @@ double fabs(double a) {
 }
 /*  общая проверка, вывод результата    */
 void zadanie3(double(*f)(double), double a){
-    double x = 0., step = 0.1, epsilon = 1E-10;
+    double x = -a, step = 0.1, epsilon = 1E-10;
     int isOdd = 1, isEven = 1;
 
-    while(x <= a)
-    {   if(f(x)> epsilon)
-    {   if(fabs(odd(x,f)) < epsilon)
-        isEven *= 0;
-    else if(fabs(even(x,f)) < epsilon)
-        isOdd *= 0;
-    else
-    {   isEven *= 0;
-        isOdd *= 0;
-    }
-    }
+    while(x <= a){
+        if(f(x) > epsilon){
+            if(fabs(odd(x,f)) < epsilon)
+                isEven *= 0;
+            else if(fabs(even(x,f)) < epsilon)
+                isOdd *= 0;
+            else{
+                isEven *= 0;
+                isOdd *= 0;
+            }
+        }
         x += step;
     }
 
