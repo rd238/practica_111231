@@ -5,7 +5,7 @@
 
 
 int main(void) {
-    //printf("%lf\n", zadanie1(3, 58, 12));
+    printf("%lf\n", zadanie1(30, 30, 30));
 
     //zadanie2(30,30,30);
 
@@ -80,10 +80,11 @@ int main(void) {
     free(A);
     */
 
-
+    /*
     char text[1000];
     fgets(text, 10000, stdin);
     zadanie10(text);
+    */
 }
 
 

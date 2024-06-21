@@ -7,7 +7,7 @@
 ну в радианах (с максимально возможной точностью).
  */
 double zadanie1(double grad, double min, double sec){
-    return grad + (min + sec / 60) / 60;
+    return (grad + (min + sec / 60) / 60) * 3.14 / 180;
 }
 
 
