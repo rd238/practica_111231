@@ -40,14 +40,14 @@ void zadanie2(int a, int b, int c) {
  */
 
 /*  проверка на нечетность. Возвращает ~0 если нечетная */
-double odd(double x, double (*f)(double))
-{   return f(x) + f(-x);
+double odd(double x, double (*f)(double)){
+    return f(x) + f(-x);
 }
 /*  проверка на четность. Возвращает ~0 если четная */
-double even(double x, double (*f)(double))
-{   return f(x) - f(-x);
+double even(double x, double (*f)(double)){
+    return f(x) - f(-x);
 }
-double fabs(double a) {
+double fabs(double a){
     if(a < 0)
         return -a;
     return a;

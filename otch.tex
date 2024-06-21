@@ -425,6 +425,67 @@
 				\end{tikzpicture}
 			\end{flushleft}
 		}
+	\newpage
+		{\textbf{Код программы}}\par
+		\begin{verbatim}
+			/*  проверка на нечетность. Возвращает ~0 если нечетная */
+			double odd(double x, double (*f)(double)){
+    			return f(x) + f(-x);
+			}
+			/*  проверка на четность. Возвращает ~0 если четная */
+			double even(double x, double (*f)(double)){
+    			return f(x) - f(-x);
+			}
+			double fabs(double a){
+   				if(a < 0)
+        			return -a;
+   			return a;
+			}
+			/*  общая проверка, вывод результата    */
+			void zadanie3(double(*f)(double), double a){
+				double x = -a, step = 0.1, epsilon = 1E-10;
+				int isOdd = 1, isEven = 1;
+
+				while(x <= a){
+					if(f(x) > epsilon){
+						if(fabs(odd(x,f)) < epsilon)
+							isEven *= 0;
+						else if(fabs(even(x,f)) < epsilon)
+							isOdd *= 0;
+						else{
+							isEven *= 0;
+							isOdd *= 0;
+						}
+					}
+					x += step;
+				}
+
+				if(isOdd)
+					printf("odd");
+				else if (isEven)
+					printf("even");
+				else
+					printf("neither odd nor even");
+			}
+		\end{verbatim}
+
+		{\textbf{Тестовые данные}\par
+
+		\begin{tikzpicture}
+			\draw (0,0)--(7,0)--(7,-3)--(0,-3)--cycle;
+			\draw (0,-1)--(7,-1);
+			\draw (0,-2)--(7,-2);
+			\draw (2.8,0)--(2.8,-3);
+			\node at (1.2,-0.5) {\textbf{Ввод}};
+			\node at (4,-0.5) {\textbf{Вывод}};
+			\node at (1.2, -1.5) {sin, 50};
+			\node at (1.2, -2.5) {cos, 5};
+			\node at (5, -1.5) {odd};
+			\node at (5, -2.5) {even};
+		\end{tikzpicture}}
+
 	\end{flushleft}
+
+
 
 \end{document}

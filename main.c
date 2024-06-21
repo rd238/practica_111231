@@ -9,7 +9,7 @@ int main(void) {
 
     //zadanie2(30,30,20);
 
-    //zadanie3(cos, 5);
+    zadanie3(sin, 50);
 
     //int a[7] = {1,2,3,4,-3,-2,-1};
     //zadanie4(a,7);
