@@ -5,9 +5,9 @@
 
 
 int main(void) {
-    printf("%lf\n", zadanie1(30, 30, 30));
+    //printf("%lf\n", zadanie1(30, 30, 30));
 
-    //zadanie2(30,30,30);
+    zadanie2(30,30,20);
 
     //zadanie3(cos, 5);
 

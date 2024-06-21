@@ -217,9 +217,112 @@
 			}
 		\end{verbatim}
 
+		{\newpage \textbf{Тестовые данные}\par
+
+		\begin{tikzpicture}
+			\draw (0,0)--(5,0)--(5,-3)--(0,-3)--cycle;
+			\draw (0,-1)--(5,-1);
+			\draw (0,-2)--(5,-2);
+			\draw (2.8,0)--(2.8,-3);
+			\node at (1.2,-0.5) {\textbf{Ввод}};
+			\node at (4,-0.5) {\textbf{Вывод}};
+			\node at (1.2, -1.5) {3, 58, 12};
+			\node at (1.2, -2.5) {30, 30, 30};
+			\node at (4, -1.5) {0.069254};
+			\node at (4, -2.5) {0.532201};
+		\end{tikzpicture}}
+		\newpage
+	\end{flushleft}
+
+	\begin{flushleft}
+		{\textbf{Задание 2}}\par
+		{\textbf{Tема 2. Разветвляющиеся алгоритмы}}\par
+		{Заданы три числа: a, b, c. Определить, могут ли они быть сторонами
+		треугольника, и если да, то определить его тип:
+		равносторонний,	равнобедренный, разносторонний.}\par
+		{\textbf{Математическое обоснование и словесное описание}\par
+		Если стороны треугольника соответствуют условиям $a+b>c$ и $a+c>b$ и $b+c>a$,
+		то он существует. Если $a=b$ или $b=c$ или $a=c$, то он равнобедренный.
+		Если $a=b$ и $b=c$ и $a=c$ то он равносторонний. Если треугольник существует и
+		невыполняется ни одно из условий, то он разносторонний.}\par
+
+		{\textbf{Блок-схема}\par 
+		\begin{center}
+			\begin{tikzpicture}
+				\filldraw [fill=black!5, very thick] ellipse (1.5 and 0.5);
+				\node at (0, 0) {Начало};
+				\draw [thick, ->] (0,-0.5) -- (0, -1);
+				\draw (-2,-1)--(2,-1)--(2.5,-1.7)--(-1.5,-1.7)--cycle;
+				\node at (0.2,-1.4) {ввод a, b, c};
+				\draw [thick, ->] (0,-1.7) -- (0, -2.3);
+				\draw (0,-2.3)--(3,-3.3)--(0,-4.3)--(-3,-3.3)--cycle;
+				\node at (0,-3.1) {a+b$>$c and a+c$>$b};
+				\node at (0,-3.6) {and b+c$>$a};
+				\node at (3,-3) {+};
+				\draw [thick, ->](-3,-3.3)--(-4,-3.3)--(-4,-4.3);
+				\draw (-7,-4.3)--(-1.5,-4.3)--(-1.2,-5.3)--(-6.7,-5.3)--cycle;
+				\node at (-4, -4.8) {Вывод Triangle doesn't exist.};
+				\draw (-4,-5.3)--(-4,-9.2)--(0,-9.2);
+				\draw (3,-3.3)--(7,-3.3);
+				\draw [thick, ->] (7,-3.3)--(7,-3.7);
+				\draw (7,-3.7)--(9,-4.5)--(7,-5.3)--(5,-4.5)--cycle;
+				\node at (7,-4.3) {a=b or a=c};
+				\node at (7,-4.8) {or b=c};
+				\node at (5,-4) {+};
+				\draw (9,-4.5)--(10,-4.5)--(10,-5.5);
+				\draw (6.5,-5.5)--(10.5,-5.5)--(11,-6.5)--(7,-6.5)--cycle;
+				\node at (9, -6) {вывод Scalene triangle.};
+				\draw (10, -6.5)--(10, -8.9)--(7,-8.9);
+				\draw [thick, ->] (5,-4.5)--(3,-4.5)--(3,-5);
+				\draw (3,-5)--(5,-5.9)--(3,-6.9)--(1,-5.9)--cycle;
+				\node at (3, -5.7) {a=b and a=c};
+				\node at (3, -6.2) {and b=c};
+				\node at (1,-5.5) {+};
+				\draw [thick, ->] (1,-5.9)--(0,-5.9)--(0,-7);
+				\draw (2.4,-7)--(-2.9,-7)--(-2.4, -8)--(2.9,-8)--cycle;
+				\node at (0,-7.5) {Вывод Equilateral triangle.};
+				\draw (0,-8)--(0,-8.5)--(3,-8.5);
+				\draw [thick, ->] (5,-5.9)--(6,-5.9)--(6,-7);
+				\draw (4,-7)--(8.5,-7)--(8.9, -8)--(4.3,-8)--cycle;
+				\node at (6.5, -7.5) {вывод Isosceles triangle.};
+				\draw [thick, ->] (6,-8)--(6, -8.5)--(3,-8.5)--(3, -8.9)--(7, -8.9)--(7, -9.2)--(0,-9.2)--(0,-9.5);
+				\filldraw [fill=black!5, very thick](0,-10) ellipse (1.5 and 0.5);
+				\node at (0, -10) {Конец};
+			\end{tikzpicture}\par
+		\end{center}}
+		\newpage
+		{\textbf{Код программы}}\par
+		\begin{verbatim}
+			void zadanie2(int a, int b, int c) {
+    			if (a + b > c && a + c > b && b + c > a)
+        			if (a == b || a == c || b == c)
+           				 if (a == b && a == c && b == c)
+                			printf("Equilateral triangle.\n");
+           				 else
+               				printf( "Isosceles triangle.\n");
+       				 else
+           				printf( "Scalene triangle.\n");
+   				 else
+        			printf( "Triangle doesn't exist.\n");
+			}
+		\end{verbatim}
+
 		{\textbf{Тестовые данные}\par
-		3, 58, 12     0.069254\par
-		30, 30, 30  0.532201}
+
+		\begin{tikzpicture}
+			\draw (0,0)--(7,0)--(7,-3)--(0,-3)--cycle;
+			\draw (0,-1)--(7,-1);
+			\draw (0,-2)--(7,-2);
+			\draw (2.8,0)--(2.8,-3);
+			\node at (1.2,-0.5) {\textbf{Ввод}};
+			\node at (4,-0.5) {\textbf{Вывод}};
+			\node at (1.2, -1.5) {30,30,30};
+			\node at (1.2, -2.5) {30,30,20};
+			\node at (5, -1.5) {Equilateral triangle.};
+			\node at (5, -2.5) {Isosceles triangle.};
+		\end{tikzpicture}}
+		\newpage
+
 	\end{flushleft}
 
 \end{document}
