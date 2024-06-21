@@ -486,6 +486,87 @@
 
 	\end{flushleft}
 
+	\begin{flushleft}
+		\newpage
+		{\textbf{Задание 4}}\par
+		{\textbf{Tема 4. Простейшие операции над массивами}}\par
+		{В массиве $C(n)$ подсчитать количество отрицательных и сумму
+		положительных элементов.}\par
+		{\textbf{Математическое обоснование и словесное описание}\par
+		Пройдем последовательно по массиву $C(n)$ и если элемент $\geq 0$
+		то будем прибавлять к счетчику $sum\_positive$, если нет, то прибавим 1 к
+		$quantity\_negative$.
+		}\par
+	\end{flushleft}
+
+	{\textbf{Блок-схема}\par 
+			\begin{center}
+				\begin{tikzpicture}
+					\filldraw [fill=black!5, very thick] (0, 0) ellipse (1.5 and 0.5);
+					\node at (0, 0) {Начало};
+					\draw [thick, ->] (0,-0.5)--(0,-1);
+					\draw (-2,-1)--(2,-1)--(2,-2.5)--(-2,-2.5)--cycle;
+					\node at (0, -1.5) {sum\_positive:=0};
+					\node at (0, -2) {quantity\_negative:=0};
+					\draw [thick, ->] (0,-2.5)--(0,-3);
+					\draw (-2,-3)--(2,-3)--(2.5,-3.5)--(2,-4)--(-2,-4)--(-2.5,-3.5)--cycle;
+					\node at (0, -3.5) {0 ... n};
+					\draw [thick, ->] (0, -4)--(0, -4.5);
+					\draw (0, -4.5)--(1, -5.5)--(0, -6.5)--(-1, -5.5)--cycle;
+					\node at (0, -5.5) {c[i]<0};
+					\draw [thick, ->] (1,-5.5)--(2,-5.5)--(2,-7);
+					\draw (0.1,-7)--(4,-7)--(4,-8)--(0.1,-8)--cycle;
+					\node at (2,-7.3) {\small quantity\_negative:=};
+					\node at (2,-7.7) {\small quantity\_negative+1};
+					\draw [thick, ->] (-1,-5.5)--(-2,-5.5)--(-2,-7);
+					\draw (-4,-7)--(-0.1,-7)--(-0.1,-8)--(-4,-8)--cycle;
+					\node at (-2, -7.3) {\small sum\_positive:=};
+					\node at (-2, -7.7) {\small sum\_positive+c[i]};
+					\draw (-2, -8)--(-2,-8.5)--(2,-8.5)--(2,-8);
+					\draw [->] (0,-8.5)--(0,-9)--(-4.5,-9)--(-4.5,-3.5)--(-2.5,-3.5);
+					\draw [->] (2.5, -3.5)--(4.5, -3.5)--(4.5,-9.5)--(0,-9.5)--(0,-10);
+					\draw (-2.5,-10)--(2,-10)--(2.5,-11.5)--(-2,-11.5)--cycle;
+					\node at (0, -10.5) {Вывод sum\_positive};
+					\node at (0, -11) {quantity\_negative};
+					\draw [->] (0,-11.5)--(0,-12);
+					\filldraw [fill=black!5, very thick] (0, -12.5) ellipse (1.5 and 0.5);
+					\node at (0, -12.5) {Конец};
+
+				\end{tikzpicture}
+			\end{center}}
+
+			\newpage
+		{\textbf{Код программы}}\par
+		\begin{verbatim}
+			void zadanie4(int *c, int n) {
+				int sum_positive = 0;
+				int quantity_negative = 0;
+				for(int i = 0; i < n; i++) {
+					if(c[i] < 0)
+						quantity_negative++;
+					else
+						sum_positive += c[i];
+				}
+
+				printf("\n%d - sum positive elements\n", sum_positive);
+				printf("%d - quantity negative elements\n", quantity_negative);
+			}
+		\end{verbatim}
+
+		{\textbf{Тестовые данные}\par
+
+		\begin{tikzpicture}
+			\draw (0,0)--(15,0)--(15,-3)--(0,-3)--cycle;
+			\draw (0,-1)--(15,-1);
+			\draw (0,-2)--(15,-2);
+			\draw (5,0)--(5,-3);
+			\node at (3,-0.5) {\textbf{Ввод}};
+			\node at (9,-0.5) {\textbf{Вывод}};
+			\node at (2.4, -1.5) {\{1,2,3,4,4,0,-1,-2,13\}, 9};
+			\node at (2.5, -2.5) {\{-1,-2,-3,-4,-5,-6,7,8,9\}, 9};
+			\node at (9, -1.5) {27 - sum positive 2 - quantity negative};
+			\node at (9, -2.5) {24 - sum positive 6 - quantity negative};
+		\end{tikzpicture}}
 
 
 \end{document}

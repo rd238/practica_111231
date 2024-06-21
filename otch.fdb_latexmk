@@ -1,9 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1718980592.10297 "c:/Users/logca/CLionProjects/afpractica/otch.tex" "otch.pdf" "otch" 1718980594.34896 0
+["pdflatex"] 1718988321.98802 "c:/Users/logca/CLionProjects/afpractica/otch.tex" "otch.pdf" "otch" 1718988324.41719 0
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1718898422 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1200.pk" 1718958502 29472 9e7567b6847e5102575f3a923f086158 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1440.pk" 1718899613 36852 84f812d4447bd00a6f48000a47e35046 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1728.pk" 1718899528 45168 34f136e02d88bf5742082cc43dff8a7d ""
+  "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1095.pk" 1718979899 24596 859af61f29e570d59c08c8c297612f7a ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1200.pk" 1718898129 27028 f54ca41bbf2e09318c3f935e2d984053 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1440.pk" 1718898637 32600 763ccb816a479958aedd631293d5f2a5 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1728.pk" 1718898527 40148 6f6d6f6502c7ced6c0c7fbc235af6a36 ""
@@ -11,6 +12,9 @@
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/labx1200.tfm" 1718901668 3308 eee81981029f67083258db36df06e523 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1718899611 3304 6a543c07045572737981351171e0505e ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/labx1728.tfm" 1718899526 3312 d199be9bd555944e2403193d58a0256a ""
+  "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/larm0600.tfm" 1718985332 3248 f742b53dd94bcfe553bd3adb4ec70cf7 ""
+  "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/larm0800.tfm" 1718985329 3240 04766e423166ba63b7fbbf132b8618cb ""
+  "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/larm1095.tfm" 1718903738 3264 ead613d557baebcc53cf028c9c92d927 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1718898124 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1718898635 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/larm1728.tfm" 1718898525 3252 3140686608bdcae603a09a7973fb9e55 ""
@@ -139,9 +143,9 @@
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1673775190 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1717270872 7532 d2e1111e17bfebb1607d8ffa779705ec ""
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/logca/CLionProjects/afpractica/otch.tex" 1718980590 22811 3be3b8cf3afd959a4d22cce6f491b39f ""
-  "otch.aux" 1718980593 133 5a94acc06222df82e661bbbec073e2f2 "pdflatex"
-  "otch.tex" 1718980590 22811 3be3b8cf3afd959a4d22cce6f491b39f ""
+  "c:/Users/logca/CLionProjects/afpractica/otch.tex" 1718988320 26229 38412fa8dc598fabebe3c641f38f7572 ""
+  "otch.aux" 1718988323 133 2c232299ee4f6eef7b92915c1089569b "pdflatex"
+  "otch.tex" 1718988320 26229 38412fa8dc598fabebe3c641f38f7572 ""
   (generated)
   "otch.aux"
   "otch.log"

@@ -9,10 +9,10 @@ int main(void) {
 
     //zadanie2(30,30,20);
 
-    zadanie3(sin, 50);
+    //zadanie3(sin, 50);
 
-    //int a[7] = {1,2,3,4,-3,-2,-1};
-    //zadanie4(a,7);
+    int a[9] = {-1,-2,-3,-4,-5,-6,7,8,9};
+    zadanie4(a, 9);
 
     /*
     int **A = (int**)malloc(sizeof(int*) * 3);
