@@ -31,18 +31,18 @@ int main(void) {
     free(A);
     */
 
-    /*
+
     int **A = (int**)malloc(sizeof(int*) * 4);
     for(int i = 0; i < 4; i++)
         A[i] = malloc(sizeof(int) * 3);
     for(int i = 0; i < 4; i++)
         for(int j = 0; j < 3; j++)
             scanf("%d", &A[i][j]);
-    zadanie6(A, 4, 4);
+    zadanie6(A, 4, 3);
     for(int i = 0; i < 4; i++)
         free(A[i]);
     free(A);
-    */
+
 
     /*
     int K[3] = {5,6,7};

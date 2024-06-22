@@ -683,6 +683,7 @@
 					\draw [->] (0,-2)--(0,-2.5);
 					\draw (-1,-2.5)--(1,-2.5)--(1.5,-3)--(1,-3.5)--(-1,-3.5)--(-1.5,-3)--cycle;
 					\node at (0,-3) {i:=0...m};
+					\node at (0.2,-3.7) {+};
 					\draw [->] (0,-3.5)--(0,-4);
 					\draw (-2,-4)--(2,-4)--(2,-5.5)--(-2,-5.5)--cycle;
 					\node at (0,-4.5) {min\_element:=$A_{i,0}$};
@@ -690,8 +691,10 @@
 					\draw [->] (0, -5.5)--(0,-6);
 					\draw (-1,-6)--(1,-6)--(1.5,-6.5)--(1,-7)--(-1,-7)--(-1.5,-6.5)--cycle;
 					\node at (0, -6.5) {j:=1...n};
+					\node at (0.2,-7.3) {+};
 					\draw [->] (0,-7)--(0,-7.5);
 					\draw (0,-7.5)--(2,-8.5)--(0,-9.5)--(-2,-8.5)--cycle;
+					\node at (2.1, -8.2) {+};
 					\node at (0,-8.5) {\small min\_element$>$$A_{i,j}$};
 					\draw [->] (2,-8.5)--(3,-8.5)--(3,-9.5);
 					\draw (1,-9.5)--(5,-9.5)--(5,-11)--(1,-11)--cycle;
@@ -705,9 +708,11 @@
 					\draw [->](0,-13.5)--(0,-14);
 					\draw (-1,-14)--(1,-14)--(1.5,-14.5)--(1,-15)--(-1,-15)--(-1.5,-14.5)--cycle;
 					\node at (0, -14.5) {j:=1...n};
+					\node at (0.2,-15.3) {+};
 					\draw [->] (0,-15)--(0,-15.5);
 					\draw (0,-15.5)--(3,-16.5)--(0,-17.5)--(-3,-16.5)--cycle;
 					\node at (0,-16.5) {\small $A_{j,min\_index}>$max\_element};
+					\node at (2.5,-16) {+};
 					\draw [->] (3,-16.5)--(3.5,-16.5)--(3.5,-17.5);
 					\draw (1,-17.5)--(6,-17.5)--(6,-18.5)--(1,-18.5)--cycle;
 					\node at (3.5,-18) {max\_element=$A_{j,min\_index}$};
@@ -716,14 +721,75 @@
 					\draw [->] (1.5,-14.5)--(6.5,-14.5)--(6.5,-20)--(0,-20)--(0,-20.5);
 					\filldraw [fill=black!5, very thick] (0, -21) ellipse (0.5 and 0.5);
 					\node at (0,-21) {1};
+					\filldraw [fill=black!5, very thick] (-4.5, -21) ellipse (0.5 and 0.5);
+					\node at (-4.5,-21) {2};
+					\draw [->] (-4.5,-20.5)--(-4.5,-3)--(-1.5,-3);
+					\filldraw [fill=black!5, very thick] (7, -21) ellipse (0.5 and 0.5);
+					\node at (7,-21) {3};
+					\draw (1.5,-3)--(7,-3)--(7,-20.5);
 					
-				
-
-					
-			
-
+				\end{tikzpicture}
+				\newpage
+				\begin{tikzpicture}
+					\filldraw [fill=black!5, very thick] (0, 0) ellipse (0.5 and 0.5);
+					\node at (0,0) {1};
+					\draw [->] (0,-0.5)--(0,-1);
+					\draw (0,-1)--(2,-2)--(0,-3)--(-2,-2)--cycle;
+					\node at (0,-1.9) {max\_element:=};
+					\node at (0,-2.3) {$A_{j,min\_index}$};
+					\node at (2,-1.5) {+};
+					\draw [->] (2,-2)--(2.5,-2)--(2.5,-3);
+					\draw (0,-3)--(5,-3)--(5,-4)--(0,-4)--cycle;
+					\node at (2.5,-3.5) {max\_element:=$A_{j,min_index}$};
+					\draw (2.5,-4)--(2.5,-4.5)--(-2.5,-4.5)--(-2.5,-2)--(-2,-2);
+					\draw [->] (0,-4.5)--(0,-5)--(-3,-5)--(-3,-0.5);
+					\filldraw [fill=black!5, very thick] (-3, 0) ellipse (0.5 and 0.5);
+					\node at (-3,0) {2};
+					\filldraw [fill=black!5, very thick] (6, 0) ellipse (0.5 and 0.5);
+					\node at (6,0) {3};
+					\draw [->](6,-0.5)--(6,-5.5)--(0,-5.5)--(0,-6);
+					\filldraw [fill=black!5, very thick] (0,-6.5) ellipse (1.5 and 0.5);
+					\node at (0,-6.5) {Конец};
 				\end{tikzpicture}
 			\end{center}}
+			\newpage
+			{\textbf{Код программы}}\par
+		\begin{verbatim}
+			void zadanie6(int **A, int m, int n) {
+				for(int i = 0; i < m; i++) {
+					int min_element = A[i][0];
+					int min_index = 0;
 
+					for(int j = 1; j < n; j++)
+						if(min_element > A[i][j])
+							min_element = A[i][j], min_index = j;
+
+					int max_element = A[0][min_index];
+					for(int j = 1; j < m; j++)
+						if(A[j][min_index] > max_element)
+							max_element = A[j][min_index];
+
+					if(max_element == min_element)
+						printf("\n(%d) (%d, %d) is saddle point\n", min_element, i, min_index);
+				}
+			}
+		\end{verbatim}
+
+		{\textbf{Тестовые данные}\par
+
+		\begin{tikzpicture}
+			\draw (0,0)--(17,0)--(17,-4)--(0,-4)--cycle;
+			\draw (0,-1)--(17,-1);
+			\draw (0,-2.5)--(17,-2.5);
+			\draw (8,0)--(8,-4);
+			\node at (1,-0.5) {\textbf{Ввод}};
+			\node at (9,-0.5) {\textbf{Вывод}};
+			\node at (3.8,-1.5) {A=\{\{1,2,3\},\{4,5,6\},\{7,8,9\},\{10,11,12\}\},};
+			\node at (1,-2.2) {4, 3};
+			\node at (10.5, -1.5) {(10) (3, 0) is saddle point};
+			\node at (3.5,-3) {A=\{\{1,2,3\},\{4,5,6\},\{7,8,9\},\{1,1,1\}\},};
+			\node at (1,-3.5) {4, 3};
+			\node at (10.5, -3) {(7) (2, 0) is saddle point};
+		\end{tikzpicture}}
 
 \end{document}
