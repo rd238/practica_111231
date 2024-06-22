@@ -11,8 +11,8 @@ int main(void) {
 
     //zadanie3(sin, 50);
 
-    int a[9] = {-1,-2,-3,-4,-5,-6,7,8,9};
-    zadanie4(a, 9);
+    //int a[9] = {-1,-2,-3,-4,-5,-6,7,8,9};
+    //zadanie4(a, 9);
 
     /*
     int **A = (int**)malloc(sizeof(int*) * 3);
