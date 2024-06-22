@@ -61,7 +61,7 @@ int main(void) {
     printf("%lf", zadanie8(points, 4));
     */
 
-
+    /*
     int **A = (int**)malloc(sizeof(int*) * 3);
     int j = 0;
     for(int i = 0; i < 3; i++) {
@@ -78,7 +78,7 @@ int main(void) {
     for(int i = 0; i < 3; i++)
         free(A[i]);
     free(A);
-
+    */
 
     /*
     char text[1000];
