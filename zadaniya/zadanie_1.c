@@ -272,7 +272,6 @@ double shoelace(Point points[], int n) {
     return abs(area) / 2.0;
 }
 
-
 double zadanie8(Point *points, int n) {
     Point hull[MAX_POINTS];
     convexHull(points, n, hull);
