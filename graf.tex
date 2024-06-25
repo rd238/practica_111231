@@ -1,0 +1,26 @@
+\documentclass{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+
+\begin{document}
+\begin{flushleft}
+    \begin{tikzpicture}
+        \begin{axis}[
+            xmin=0.2,
+            xmax=3,
+            ymin=-10,
+            ymax=10,
+            xlabel=$x$,
+            ylabel=$y,z$,
+            xtick={0.2,0.3,...,3},
+            ytick={-10,-9,...,10},
+            grid=major
+        ]
+        \addplot [color=blue, mark=none] {2/x+2};
+        \addplot [color=red, mark=none] {x^2+1};
+        \end{axis}
+    \end{tikzpicture}
+\end{flushleft}
+\end{document}

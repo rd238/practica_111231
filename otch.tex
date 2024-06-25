@@ -1,12 +1,21 @@
 \documentclass[12pt, a4paper]{article}
 
+
 \usepackage[english, russian]{babel}
 \usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 
-\usepackage{amsmath}
+
+\usepackage{amsmath,amssymb,cmap}
 \usepackage{tikz}
+\usepackage{pgfplots}
 \usepackage{verbatim}
+\usepackage{cases}
+\pgfplotsset{width=15cm,height=10cm}
+
+\usepackage[mathletters]{ucs}
+
+\DeclareUnicodeCharacter{122}{z}
 
 \usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
 
@@ -153,9 +162,9 @@
 		{Tема 13. \par 
 		\begin{equation*} 
 			\begin{cases} 
-				y=\frac{2}{x}+2
+				y=ln(x)
 				\\
-				z=x^2+1
+				z=-2x+1
 			\end{cases} 
 		\end{equation*}
 		\begin{center}в диапазоне $0.2\leq x\leq 3$, с шагом $\Delta 0.1$.\end{center}} \par
@@ -1189,4 +1198,241 @@
 			\node at (8, -2.5) {поделенный текст};
 		\end{tikzpicture}}
 
+		\begin{flushleft}
+			\newpage
+			{\textbf{Задание 11}}\par
+			{\textbf{Tема 11. Аналитическая геометрия}}\par
+			{Построить прямую параллельную оси абсцисс $(Ox)$ и пересекающую
+			ось ординат $(Oy)$ в точке $A(0,2)$ в 
+			диапазоне $x\in [-3;3]$ с шагом $\Delta =0.5$.} \par
+		\end{flushleft}
+		\begin{flushleft}
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin=-3,
+					xmax=3,
+					ymin=0,
+					ymax=4,
+					xlabel=$x$,
+					ylabel=$y$,
+					xtick={-3,-2.5,...,3},
+					ytick={0,0.5,...,4},
+					grid=major]
+					\addplot [color=blue, mark=none] {2};
+					\addplot [only marks, mark=*, color=red] coordinates {(0,2)};
+				\end{axis}
+				\node[color=red] at (6.5,4.6) {A(0,2)};
+			\end{tikzpicture}
+		\end{flushleft}
+
+		{\textbf{Код программы}}\par
+		\begin{verbatim}
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin=-3, xmax=3,
+					ymin=0, ymax=4,
+					xlabel=$x$,
+					ylabel=$y$,
+					xtick={-3,-2.5,...,3},
+					ytick={0,0.5,...,4},
+					grid=major]
+					\addplot [color=blue, mark=none] {2};
+					\addplot [only marks, mark=*, color=red] coordinates {(0,2)};
+				\end{axis}
+				\node[color=red] at (6.5,4.6) {A(0,2)};
+			\end{tikzpicture}
+		\end{verbatim}
+
+
+		\begin{flushleft}
+			{\textbf{Задание 12}}\par
+			{\textbf{Tема 12. Кривые второго порядка на плоскости}}\par
+			{Построить верхнюю часть
+			параболы $y^2=x$ при $0\leq x \leq 4$ с шагом $\Delta =0.25$.} \par
+		\end{flushleft}
+		\begin{flushleft}
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin=0.5,
+					xmax=4,
+					ymin=0,
+					ymax=3,
+					xlabel=$x$,
+					ylabel=$y$,
+					xtick={0.5,1,...,4},
+					ytick={0,0.5,...,3},
+					grid=major
+				]
+					\addplot [color=blue, mark=none] {sqrt(x)};
+				\end{axis}
+			\end{tikzpicture}
+		\end{flushleft}
+
+		{\textbf{Код программы}}\par
+		\begin{verbatim}
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin=0.5, xmax=4,
+					ymin=0, ymax=4,
+					xlabel=$x$,
+					ylabel=$y$,
+					xtick={0.5,1,...,4},
+					ytick={0,0.5,...,5},
+					grid=major]
+					\addplot [color=blue, mark=none] {sqrt(x)};
+				\end{axis}
+			\end{tikzpicture}
+		\end{verbatim}
+
+		\begin{flushleft}
+			\newpage
+			{\textbf{Задание 13}}\par
+			{\textbf{Tема 13. Графическое решение систем уравнений}}\par
+			{\begin{equation*} 
+				\begin{cases} 
+					y=ln(x)
+					\\
+					z=-2x+1
+				\end{cases} 
+			\end{equation*}
+			\begin{center}
+				в диапазоне $0.2\leq x\leq 2.5$, с шагом $\Delta 0.2$.
+			\end{center}.} \par
+			{\textbf{Математическое обоснование и словесное описание}\par
+			Построим графики $y=ln(x)$ и $z=-2x+1$. Координаты точки их 
+			пересечения будет решением данной системы.
+			}\par
+		\end{flushleft}
+		
+		\begin{flushleft}
+			\begin{tikzpicture}
+				\pgfplotsset{width=17cm,height=15cm}
+				\begin{axis}[
+					xmin=0.2, xmax=2.5,
+					ymin==5, ymax=5,
+					xlabel=$x$,
+					ylabel=$y;z$,
+					xtick={0.2,0.4,...,2.5},
+					ytick={-5,-4.8,...,5},
+					grid=major
+					]
+					\addplot [color=red, mark=none] {ln(x)};
+					\addlegendentry{$y=ln(x)$};
+					\addplot [color=blue, mark=none] {-2*x+1};
+					\addlegendentry{$z=-2x+1$};
+					\addplot [color=black, mark=*] coordinates {(0.7,-0.4)};
+					\addlegendentry{$A(0.7,-0.4)$};
+				\end{axis}
+			\end{tikzpicture}
+		\end{flushleft}
+
+		{Координаты точки пересечения $A(0.7,-0.4)$ являются решением
+		системы уравнений
+		\begin{equation*} 
+			\begin{cases} 
+				y=ln(x)
+				\\
+				z=-2x+1
+			\end{cases} 
+		\end{equation*}
+		Проверим:
+		\begin{equation*} 
+			\begin{cases} 
+				-0.4\approx ln(0.7)
+				\\
+				-0.4=-2\cdot 0.7+1
+			\end{cases} 
+		\end{equation*}}
+		
+		{\textbf{Код программы}}\par
+		\begin{verbatim}
+			\begin{tikzpicture}
+				\pgfplotsset{width=17cm,height=15cm}
+				\begin{axis}[
+					xmin=0.2, xmax=2.5,
+					ymin==5, ymax=5,
+					xlabel=$x$,
+					ylabel=$y;z$,
+					xtick={0.2,0.4,...,2.5},
+					ytick={-5,-4.8,...,5},
+					grid=major]
+					\addplot [color=red, mark=none] {ln(x)};
+					\addlegendentry{$y=ln(x)$};
+					\addplot [color=blue, mark=none] {-2*x+1};
+					\addlegendentry{$z=-2x+1$};
+					\addplot [color=black, mark=*] coordinates {(0.7,-0.4)};
+					\addlegendentry{$A(0.7,-0.4)$};
+				\end{axis}
+			\end{tikzpicture}
+		\end{verbatim}
+
+
+
+		\begin{flushleft}
+			\newpage
+			{\textbf{Задание 14}}\par
+			{\textbf{Tема 14. Плоскость в трехмерном пространстве}}\par
+			{Построить плоскость, параллельную плоскости $Oxy$ и пересекающую ось $Oz$
+			в точке $M(0,0,2)$, при $0\leq x\leq 6$ с шагом $\Delta =0.5$ и $0\leq y\leq 6$
+			с шагом $\Delta =1$.} \par
+		\end{flushleft}
+
+		\begin{flushleft}
+			\begin{tikzpicture}
+				\pgfplotsset{width=17cm,height=15cm}
+				\begin{axis}[
+					xmin=0, xmax=6,
+					ymin=0, ymax=6,
+					zmin=0, zmax=6,
+					xlabel=$x$,
+					ylabel=$y$,
+					zlabel=$z$,
+					xtick={0.5,1,...,6},
+					ytick={0.5,1.5,...,6},
+					ztick={0,1,...,6},
+					grid=major
+					]
+					\addplot3 [surf, color=red, mark=none, fill=red!50] {2};
+					\addplot3 [color=black, mark=*] coordinates {(0,0,2)};
+				\end{axis}
+			\end{tikzpicture}
+		\end{flushleft}
+
+
+		\begin{flushleft}
+			\newpage
+			{\textbf{Задание 15}}\par
+			{\textbf{Tема 15. Поверхность второго порядка в трехмерном пространстве}}\par
+			{Построить верхнюю часть эллипсоида, заданного уравнением 
+			$\frac{x^2}{9}+\frac{y^2}{4}+z^2=1$, лежащую в диапазоне $-3\leq x\leq 3$, $-2\leq y\leq 2$ с 
+			шагом $\Delta =0.5$ для обеих переменных.} \par
+		\end{flushleft}
+
+		
+		\begin{flushleft}
+			\begin{tikzpicture}
+				\pgfplotsset{width=17cm,height=15cm}
+				\begin{axis}[
+					view={135}{30},
+					xmin=-3, xmax=3,
+					ymin=-2, ymax=2,
+					zmin=0, zmax=6,
+					xlabel=$x$,
+					ylabel=$y$,
+					zlabel=$z$,
+					xtick={-3,-2.5,...,6},
+					ytick={-2,-1.5,...,6},
+					ztick={0,1,...,6},
+					colormap/viridis
+					]
+					\addplot3 [surf, color=blue, fill=red!30] {(x^2/9)+(y^2/4)+(y^2)-1};
+					
+				\end{axis}
+			\end{tikzpicture}
+		\end{flushleft}
+
+
+		авпвап
 \end{document}
+
+
