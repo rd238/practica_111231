@@ -5,17 +5,17 @@
 \usepackage[T2A]{fontenc}
 \usepackage[utf8x]{inputenc}
 
-
 \usepackage{amsmath,amssymb,cmap}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{verbatim}
 \usepackage{cases}
-\pgfplotsset{width=15cm,height=10cm}
+
+\pgfplotsset{width=15cm,height=10cm,compat=1.18}
 
 \usepackage[mathletters]{ucs}
 
-\DeclareUnicodeCharacter{122}{z}
+%\DeclareUnicodeCharacter{122}{z}
 
 \usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
 
@@ -1411,9 +1411,7 @@
 		
 		\begin{flushleft}
 			\begin{tikzpicture}
-				\pgfplotsset{width=17cm,height=15cm}
 				\begin{axis}[
-					view={135}{30},
 					xmin=-3, xmax=3,
 					ymin=-2, ymax=2,
 					zmin=0, zmax=6,
@@ -1425,14 +1423,23 @@
 					ztick={0,1,...,6},
 					colormap/viridis
 					]
-					\addplot3 [surf, color=blue, fill=red!30] {(x^2/9)+(y^2/4)+(y^2)-1};
+					\addplot3 [surf, color=blue, fill=red!30] {(x^2/9)+(y^2/4)-1};%+(z^2)-1 вместо -1 в конце
 					
 				\end{axis}
 			\end{tikzpicture}
 		\end{flushleft}
+	\newpage
 
-
-		авпвап
+	\begin{center}
+		\newpage
+		{\Large \textbf{Заключение}}
+	\end{center}
+	\begin{flushleft}
+		Вывод: закрепил темы, пройденные на занятиях по Основам программирования,
+		научился работать с системой компьютерной верстки \LaTeX и
+		пакетом TiKZ для создания графики(2D и 3D).
+	\end{flushleft}
+	
 \end{document}
 
 

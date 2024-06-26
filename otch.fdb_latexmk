@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1719225189.59894 "c:/Users/logca/CLionProjects/afpractica/otch.tex" "otch.pdf" "otch" 1719225201.52081 0
-  "C:/Users/logca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1719222844 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1719389800.76507 "c:/Users/logca/CLionProjects/afpractica/otch.tex" "otch.pdf" "otch" 1719389811.72574 0
+  "C:/Users/logca/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1719386582 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1200.pk" 1718958502 29472 9e7567b6847e5102575f3a923f086158 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1440.pk" 1718899613 36852 84f812d4447bd00a6f48000a47e35046 ""
   "C:/Users/logca/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1728.pk" 1718899528 45168 34f136e02d88bf5742082cc43dff8a7d ""
@@ -215,9 +215,9 @@
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/ucs/ucsencs.def" 1700127473 22451 4813aebd39d52954775dc133caf20eeb ""
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/ucs/utf8x.def" 1700127473 8944 e3433baec74c4b7b278c6b6a547ff9ec ""
   "C:/Users/logca/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/logca/CLionProjects/afpractica/otch.tex" 1719225172 60116 7bdb4c43804b8333411ceed63799b9ee ""
-  "otch.aux" 1719225200 133 fbfa02f93ea2cb7aa24fdf1566ffe93a "pdflatex"
-  "otch.tex" 1719225172 60116 7bdb4c43804b8333411ceed63799b9ee ""
+  "c:/Users/logca/CLionProjects/afpractica/otch.tex" 1719389799 60537 7ff358c719eaf7c860a390829664ec96 ""
+  "otch.aux" 1719389810 133 5f338d8b9f78f16561627be4bfef875f "pdflatex"
+  "otch.tex" 1719389799 60537 7ff358c719eaf7c860a390829664ec96 ""
   (generated)
   "otch.aux"
   "otch.log"
